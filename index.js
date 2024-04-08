@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const studentName = studentNameInput.value;
       const personalMessage = personalMessageInput.value;
       const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+      const logo = document.createElement ("img");
   
       if (studentName.trim() === '' || personalMessage.trim() === '' || courseName.trim() === '') {
         alert('Please fill in all fields');
@@ -32,10 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
       <h3>${courseName}</h3>
       <p>with legendary perseverance and world-class bad assery for never giving up🏆</p>
       
-      <p>${personalMessage}😻</p>
     `;
 
-    const logo = document.createElement ("img");
       logo.src = "./logo.png";
       logo.width = 200;
       certificateContent.appendChild(logo);
